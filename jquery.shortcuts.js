@@ -97,7 +97,7 @@
     var checkIsInput = function(target) {
         var name = target.tagName.toLowerCase();
         var type = target.type;
-        return (name === 'input' && $.inArray(type, ['text', 'password', 'file', 'search']) > -1) || name === 'textarea';
+        return (name === 'input' && $.inArray(type, ['text', 'password', 'file', 'search']) > -1) || name === 'textarea' || (name === 'span' && target.contentEditable === 'true');
     };
 
     var run = function(type, e) {
